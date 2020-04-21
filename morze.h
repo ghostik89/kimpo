@@ -28,4 +28,4 @@ const int MAX_SIZE = 256;
 	param[in|out]: DecodedVariants - вектор расшифрованных вариантов
 	param[in|out]: StartIndex - индекс, место в векторе расшифрованных вариантов
 */
-void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, int StartIndex);
+void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, string& BuildString);
