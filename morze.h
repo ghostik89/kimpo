@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-const map<string, char> Dictionary = {
+const vector<pair<string, char>> Dictionary = {
 	{".-", 'A'}, {"-…", 'Б'}, {".--", 'В'},
 	{"--.",'Г'}, {"-..",'Д'}, {".",'Е'},
 	{"…-",'Ж'}, {"--..",'З'}, {"..",'И'},
@@ -28,4 +28,5 @@ const int MAX_SIZE = 256;
 	param[in|out]: DecodedVariants - вектор расшифрованных вариантов
 	param[in|out]: StartIndex - индекс, место в векторе расшифрованных вариантов
 */
-void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, string& BuildString);
+void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, const string& BuildString);
+
