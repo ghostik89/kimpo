@@ -23,10 +23,10 @@ const vector<pair<string, char>> Dictionary = {
 
 const int MAX_SIZE = 256;
 
-/*
+/*!	Поиск возможных вариантов перевода с азубки Морзе на русский
 	param[in]: DecodeString - исходная строка, зашифрованная в азбуке Морзе
 	param[in|out]: DecodedVariants - вектор расшифрованных вариантов
-	param[in|out]: StartIndex - индекс, место в векторе расшифрованных вариантов
+	param[in]: BuildString - строка для временного хранения промежуточных данных расшифорвки
 */
 void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, const string& BuildString);
 
