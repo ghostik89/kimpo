@@ -26,9 +26,10 @@ void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, co
 
 bool CheckStringForInvalidSym(const string& CheckedString)
 {
-	for (const char& c : CheckedString)
-		if (c != '.' && c != '-')
-			return false;
-	return true;
+	//Изначально считаем, что посторонних символов в строке нет
+	for (const char& c : CheckedString)//Просматриваем каждый символ в строке
+		if (c != '.' && c != '-')//если обнаружен посторонний символ...
+			return false; //...то выдаем ошибку
+	return true;//Если посторонних символов не обнаружено, то говорим об отсутствии посторонних символов
 }
 
