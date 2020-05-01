@@ -27,7 +27,7 @@ void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, co
 bool CheckStringForInvalidSym(const string& CheckedString)
 {
 	for (const char& c : CheckedString)
-		if (c != '.' || c != '-')
+		if (c != '.' && c != '-')
 			return false;
 	return true;
 }
