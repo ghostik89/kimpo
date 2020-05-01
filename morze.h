@@ -30,3 +30,8 @@ const int MAX_SIZE = 256;
 */
 void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, const string& BuildString);
 
+/*! Проверка на посторонние символы в сообщении на азбуке Морзе
+	param[in]: CheckedString - строка для проверки на посторонние символы
+	return: имеет ли строка просторонние символы(true - имеет, false - не имеет)
+*/
+bool CheckStringForInvalidSym(const string& CheckedString);
