@@ -34,4 +34,4 @@ void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, co
 	param[in]: CheckedString - строка, которая проверяется на наличие посторонних символов
 	return: имеет ли строка просторонние символы(true - имеет, false - не имеет)
 */
-bool CheckStringForInvalidSym(const string& CheckedString);
+bool CheckStringForInvalidChar(const string& CheckedString);

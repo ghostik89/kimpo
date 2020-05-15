@@ -24,7 +24,7 @@ void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, co
 	}
 }
 
-bool CheckStringForInvalidSym(const string& CheckedString)
+bool CheckStringForInvalidChar(const string& CheckedString)
 {
 	//Изначально считаем, что посторонних символов в строке нет
 	for (const char& c : CheckedString)//Просматриваем каждый символ в строке
