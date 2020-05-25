@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include <vector>
+#include <algorithm>
 #include "../Morze/morze.cpp"
 using namespace std;
 
@@ -90,6 +91,50 @@ namespace TestingMorze
 
 			vector<string> WaitingResult = {""};
 			Assert::IsTrue(CompareVectors(InputVector, WaitingResult));
+		}
+
+		TEST_METHOD(OneWordTest)
+		{
+			const string InputString = "---..-.---";//×ÀÉ
+			vector<string> InputVector;
+			string BiuldString;
+			DecodeMorze(InputString, InputVector, BiuldString);
+
+			string MustBeString = "×ÀÉ";
+			Assert::IsTrue(find(InputVector.begin(), InputVector.end(), MustBeString) != InputVector.end());
+		}
+
+		TEST_METHOD(OneNumberTest)
+		{
+			const string InputString = ".---------";//10
+			vector<string> InputVector;
+			string BiuldString;
+			DecodeMorze(InputString, InputVector, BiuldString);
+
+			string MustBeString = "10";
+			Assert::IsTrue(find(InputVector.begin(), InputVector.end(), MustBeString) != InputVector.end());
+		}
+
+		TEST_METHOD(NumbersAndLetterTest)
+		{
+			const string InputString = ".-....-";//À4
+			vector<string> InputVector;
+			string BiuldString;
+			DecodeMorze(InputString, InputVector, BiuldString);
+
+			string MustBeString = "À4";
+			Assert::IsTrue(find(InputVector.begin(), InputVector.end(), MustBeString) != InputVector.end());
+		}
+
+		TEST_METHOD(NumbersAndWordTest)
+		{
+			const string InputString = "---..-.---.---------";//×ÀÉ10
+			vector<string> InputVector;
+			string BiuldString;
+			DecodeMorze(InputString, InputVector, BiuldString);
+
+			string MustBeString = "×ÀÉ10";
+			Assert::IsTrue(find(InputVector.begin(), InputVector.end(), MustBeString) != InputVector.end());
 		}
 	};
 }
