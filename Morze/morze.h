@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 
+
+/*!Cловарь для хранения данных вида {буква на азбуке Морзе, ее перевод}*/
 const vector<pair<string, char>> Dictionary = {
 	{".-", 'А'}, {"-...", 'Б'}, {".--", 'В'},
 	{"--.",'Г'}, {"-..",'Д'}, {".",'Е'},
@@ -21,17 +23,16 @@ const vector<pair<string, char>> Dictionary = {
 	{"--..." , '7'}, {"---.." , '8'}, {"----." , '9'},
 };
 
-const int MAX_SIZE = 256;
 
 /*!	Поиск возможных вариантов перевода с азубки Морзе на русский
-	param[in]: DecodeString - исходная строка, зашифрованная в азбуке Морзе
-	param[in|out]: DecodedVariants - вектор расшифрованных вариантов
-	param[in]: BuildString - строка для временного хранения промежуточных данных расшифорвки
+ *	\param[in] DecodeString - исходная строка, зашифрованная в азбуке Морзе
+ *	\param[out] DecodedVariants - вектор расшифрованных вариантов
+ *	\param[in] BuildString - строка для временного хранения промежуточных данных расшифорвки
 */
 void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, const string& BuildString);
 
 /*! Проверка на посторонние символы в сообщении на азбуке Морзе
-	param[in]: CheckedString - строка, которая проверяется на наличие посторонних символов
-	return: имеет ли строка просторонние символы(true - имеет, false - не имеет)
+ *	\param[in] CheckedString - строка, которая проверяется на наличие посторонних символов
+ *	\return имеет ли строка просторонние символы(true - имеет, false - не имеет)
 */
 bool CheckStringForInvalidChar(const string& CheckedString);

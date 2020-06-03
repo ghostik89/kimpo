@@ -24,6 +24,7 @@ void DecodeMorze(const string& DecodeString, vector<string>& DecodedVariants, co
 	}
 }
 
+
 bool CheckStringForInvalidChar(const string& CheckedString)
 {
 	//Изначально считаем, что посторонних символов в строке нет
@@ -32,4 +33,5 @@ bool CheckStringForInvalidChar(const string& CheckedString)
 			return false; //...то выдаем ошибку
 	return true;//Если посторонних символов не обнаружено, то говорим об отсутствии посторонних символов
 }
+
 

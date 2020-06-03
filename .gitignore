@@ -1,5 +1,12 @@
+Morze/html
+
 # Prerequisites
 *.d
+*.tlog
+*.lastbuildstate
+*.log
+*.idb
+*.pdb
 
 # Compiled Object files
 *.slo
